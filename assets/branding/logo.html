@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&display=block" rel="stylesheet">
+<style>
+html,body{margin:0;background:#000}
+.tile{width:800px;height:800px;position:relative;overflow:hidden}
+svg{position:absolute;inset:0}
+</style></head><body>
+
+<!-- A: sunset + WW monogram -->
+<div class="tile" id="a"><svg viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0b2e"/><stop offset="1" stop-color="#0b0614"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd23f"/><stop offset=".55" stop-color="#ff5e7e"/><stop offset="1" stop-color="#c2187a"/></linearGradient>
+    <clipPath id="sc"><circle cx="400" cy="400" r="270"/></clipPath>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <g clip-path="url(#sc)">
+    <rect x="130" y="130" width="540" height="540" fill="url(#sun)"/>
+    <g fill="#1a0b2e">
+      <rect x="0" y="470" width="800" height="10"/><rect x="0" y="508" width="800" height="14"/>
+      <rect x="0" y="550" width="800" height="18"/><rect x="0" y="596" width="800" height="24"/>
+      <rect x="0" y="648" width="800" height="40"/>
+    </g>
+  </g>
+  <g transform="rotate(-8 400 400)">
+    <text x="412" y="492" text-anchor="middle" font-family="Anton" font-size="300" fill="#0b0614" letter-spacing="-6">WW</text>
+    <text x="400" y="480" text-anchor="middle" font-family="Anton" font-size="300" fill="#ffffff" stroke="#0b0614" stroke-width="10" paint-order="stroke" letter-spacing="-6">WW</text>
+  </g>
+  <g fill="#3ef0e0" transform="translate(400 655)">
+    <g id="st"><polygon points="0,-18 5.3,-5.6 18.6,-5.6 7.8,2.2 11.8,15 0,7.4 -11.8,15 -7.8,2.2 -18.6,-5.6 -5.3,-5.6"/></g>
+    <use href="#st" x="-90"/><use href="#st" x="-45"/><use href="#st" x="45"/><use href="#st" x="90"/>
+  </g>
+</svg></div>
+
+<!-- B: stamped "WASTED WEEKLY" badge -->
+<div class="tile" id="b"><svg viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#ff2e63"/>
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#0b0614" stroke-width="16"/>
+  <circle cx="400" cy="400" r="270" fill="none" stroke="#0b0614" stroke-width="4" stroke-dasharray="14 12"/>
+  <g transform="rotate(-10 400 400)">
+    <rect x="70" y="300" width="660" height="200" fill="#0b0614"/>
+    <text x="400" y="452" text-anchor="middle" font-family="Anton" font-size="170" fill="#ffffff" letter-spacing="4">WASTED</text>
+    <text x="400" y="560" text-anchor="middle" font-family="Bungee" font-size="66" fill="#0b0614" letter-spacing="14">WEEKLY</text>
+  </g>
+  <g fill="#ffd23f" transform="translate(400 210)">
+    <use href="#st" x="-90"/><use href="#st" x="-45"/><use href="#st"/><use href="#st" x="45"/><use href="#st" x="90"/>
+  </g>
+</svg></div>
+
+<!-- C: minimal neon W with skid-mark underline -->
+<div class="tile" id="c"><svg viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="neo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ef0e0"/><stop offset="1" stop-color="#ff5e7e"/></linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="800" fill="#0b0614"/>
+  <text x="400" y="530" text-anchor="middle" font-family="Anton" font-size="430" fill="none" stroke="url(#neo)" stroke-width="16" filter="url(#glow)">W</text>
+  <path d="M230 590 C 340 572, 470 606, 570 582" stroke="#ffd23f" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M255 618 C 350 606, 460 632, 545 616" stroke="#ffd23f" stroke-width="8" fill="none" stroke-linecap="round" opacity=".7"/>
+</svg></div>
+</body></html>
