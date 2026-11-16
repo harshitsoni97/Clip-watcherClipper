@@ -75,6 +75,11 @@ class Twitch:
         for c in results:
             if c["name"].lower() == kw:
                 return c
+        if len(results) > 1:
+            import logging
+            logging.getLogger("clipper").warning(
+                "no exact category match for %r; using %r (set `category:` in config to pin it)",
+                keyword, results[0]["name"])
         return results[0]
 
     def users_by_login(self, logins: list[str]) -> dict[str, dict]:

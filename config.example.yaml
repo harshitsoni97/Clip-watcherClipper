@@ -8,7 +8,8 @@ twitch:
   client_secret: ""
 
 jobs:
-  - keyword: valorant          # matched to a Twitch category; falls back to clip-title search
+  - keyword: gta 6             # used for titles/metadata and the title-search fallback
+    category: Grand Theft Auto VI   # exact Twitch category name (avoids matching GTA V)
     window_days: 7             # how far back to look for clips
     max_candidates: 40         # clips sent to analysis
     languages: [en]            # empty list = any language

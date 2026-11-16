@@ -24,7 +24,8 @@ def discover(tw: Twitch, job: dict, spike_cfg: dict) -> list[Candidate]:
     allow_ids = {u["id"] for u in users.values()}
 
     cands: list[Candidate] = []
-    cat = tw.find_category(keyword)
+    # pin the exact Twitch category when the keyword is ambiguous ("gta 6" could match GTA V)
+    cat = tw.find_category(job.get("category") or keyword)
     if cat:
         log.info("keyword %r -> category %s (%s)", keyword, cat["name"], cat["id"])
         cands += tw.top_clips(game_id=cat["id"], days=days, limit=300)
