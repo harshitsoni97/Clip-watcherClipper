@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+config.yaml
+.env
+data/
+output/
+*.mp4
+*.mkv
